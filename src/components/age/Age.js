@@ -3,14 +3,15 @@ import React from 'react'
 import AgeForm from './AgeForm'
 import AgeInput from './AgeInput'
 
+import './Age.css'
+
 const Age = () => (
-  <div>
-    <span>How old are you?</span>
+  <section className="age">
     <AgeForm>
-      <AgeInput/>
-      <button type="submit">Confirm</button>
+      <div className="age-question">I am <AgeInput/> years old</div>
+      { null && <button type="submit">Confirm</button> }
     </AgeForm>
-  </div>
+  </section>
 )
 
 export default Age

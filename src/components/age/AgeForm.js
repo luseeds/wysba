@@ -7,6 +7,8 @@ import { confirmAge } from './ageStore'
 class AgeForm extends React.Component {
   onSubmit = (event) => {
     event.preventDefault()
+    // on Android remove the focus on the input
+    document && document.activeElement && document.activeElement.blur()
     this.props.confirmAge()
   }
 
