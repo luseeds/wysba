@@ -4,24 +4,16 @@ import { connect } from 'react-redux'
 
 import Animals from 'components/animals/Animals'
 
-const Result = ({ age, children }) => {
-  if (!age.confirmed || !age.value) {
-    return null
-  }
-
-  return <div>
-    <span>Human lifespan is 79 years. So you lived {age.ratio}% of a 'standard' life.</span>
-    <Animals ratio={age.ratio}/>
+const Result = ({ ratio, children }) => (
+  <div>
+    <span>Human lifespan is 79 years. So you lived {ratio}% of a 'standard' life.</span>
+    <Animals ratio={ratio}/>
   </div>
-}
+)
 Result.propTypes = {
-  age: PropTypes.shape({
-    confirmed: PropTypes.bool,
-    value: PropTypes.number,
-    ratio: PropTypes.number,
-  }),
+  ratio: PropTypes.number,
   children: PropTypes.node,
 }
 
-const select = (state) => ({ age: state.age })
+const select = (state) => ({ ratio: state.age.ratio })
 export default connect(select)(Result)

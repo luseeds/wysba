@@ -11,7 +11,6 @@ const Age = ({ age }) => (
   <section className="age">
     <AgeForm>
       <div className="age-question">I am <AgeInput/> {age > 1 ? 'years' : 'year'} old</div>
-      { null && <button type="submit">Confirm</button> }
     </AgeForm>
   </section>
 )
