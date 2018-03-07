@@ -1,20 +1,30 @@
 .animal {
-  width: 300px;
-  min-width: 250px;
-  padding: .5rem;
+  width: 370px;
+  min-width: 300px;
   margin: 1rem;
   background: #fff;
   color: black;
+  display: flex;
 }
 
-/* @media (min-width: 425px) {
-  .animal {
-    width: 44vw;
-  }
-} */
+.animal .picture {
+  display: flex;
+  min-width: 75px;
+}
+
+.animal .picture img {
+  margin: auto
+}
+
+.animal .content {
+  flex: 1;
+  padding: .5rem;
+  margin: auto;
+}
 
 .animal .name {
   text-align: left;
+  color: #43565f;
 }
 
 .animal .progress-bar {

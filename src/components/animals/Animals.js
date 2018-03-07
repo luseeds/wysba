@@ -7,7 +7,7 @@ import Animal from './Animal'
 
 const Animals = ({ ratio, animals }) => {
   return <div className="animals">
-    { animals.map((animal) => <Animal key={animal.name} animal={animal} ratio={ratio}/>) }
+    { animals.map((animal) => <Animal key={animal.key} animal={animal} ratio={ratio}/>) }
   </div>
 }
 Animals.propTypes = {
