@@ -5,10 +5,14 @@ import { connect } from 'react-redux'
 import Animals from 'components/animals/Animals'
 
 const Result = ({ age, children }) => {
-  const showResult = age.confirmed && age.value
-  return showResult
-    ? <div><Animals/></div>
-    : null
+  if (!age.confirmed || !age.value) {
+    return null
+  }
+
+  return <div>
+    <span>Human lifespan is 79 years. So you lived {age.ratio}% of a 'standard' life.</span>
+    <Animals ratio={age.ratio}/>
+  </div>
 }
 Result.propTypes = {
   age: PropTypes.shape({

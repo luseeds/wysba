@@ -14,5 +14,5 @@ Animals.propTypes = {
   animals: PropTypes.array,
 }
 
-const select = (state) => ({ ratio: state.age.ratio, animals: state.animals.data })
+const select = (state) => ({ animals: state.animals.data })
 export default connect(select)(Animals)
