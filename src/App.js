@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import logo from './logo.svg'
 import './App.css'
+import Age from 'components/age/Age'
+import Result from 'components/result/Result'
 
 class App extends Component {
   render() {
@@ -9,10 +11,11 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo"/>
-          <h1 className="App-title">wisba?</h1>
+          <h1 className="App-title">Would I still be alive?</h1>
         </header>
         <div className="App-intro">
-          wip - :)
+          <Age/>
+          <Result/>
         </div>
       </div>
     )
