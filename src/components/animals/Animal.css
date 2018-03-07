@@ -1,6 +1,7 @@
 .animal {
   width: 370px;
   min-width: 300px;
+  padding: .5rem;
   margin: 1rem;
   background: #fff;
   color: black;
@@ -18,7 +19,7 @@
 
 .animal .content {
   flex: 1;
-  padding: .5rem;
+  padding: 0 .5rem;
   margin: auto;
 }
 
@@ -32,6 +33,7 @@
   color: white;
   display: flex;
   height: 30px;
+  border: 2px solid #222;
 }
 .animal.alive .progress-bar {
   background: #4dc5b6;
