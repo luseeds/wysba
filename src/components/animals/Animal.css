@@ -1,8 +1,9 @@
 .animal {
-  width: 370px;
+  width: 75vw;
   min-width: 300px;
-  padding: .5rem;
-  margin: 1rem;
+  max-width: 370px;
+  padding: 8px;
+  margin: 16px;
   background: #fff;
   color: black;
   display: flex;
@@ -26,6 +27,7 @@
 .animal .name {
   text-align: left;
   color: #43565f;
+  margin-bottom: 5px;
 }
 
 .animal .progress-bar {

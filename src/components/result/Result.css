@@ -1,0 +1,36 @@
+.result-explanation {
+  background-color: #cd5b5c;
+  padding: 20px 0;
+}
+
+.result-explanation .explanation {
+  width: 90vw;
+  max-width: 371px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+@media (min-width: 894px) {
+  .result-explanation .explanation {
+    max-width: 774px;
+  }
+}
+
+
+.result-explanation .explanation .text-center {
+  text-align: center;
+}
+
+.result-explanation .explanation .animal {
+  margin: 20px auto;
+}
+
+.result-explanation .explanation .animal .progress-bar {
+  font-size: 80%;
+}
+
+@media (min-width: 460px) {
+  .result-explanation .explanation .animal .progress-bar {
+    font-size: inherit;
+  }
+}
