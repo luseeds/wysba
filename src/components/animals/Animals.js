@@ -2,10 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
+import './Animals.css'
 import Animal from './Animal'
 
 const Animals = ({ ratio, animals }) => {
-  return <div>
+  return <div className="animals">
     { animals.map((animal) => <Animal key={animal.name} animal={animal} ratio={ratio}/>) }
   </div>
 }

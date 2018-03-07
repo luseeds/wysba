@@ -6,7 +6,7 @@ const CONFIRM = 'AGE/CONFIRM'
 const setAge = (age) => ({ type: SET, value: age })
 const confirmAge = () => ({ type: CONFIRM })
 
-const reducer = (state = {}, payload) => {
+const reducer = (state = { value: 10, ratio: 5.5, confirmed: true }, payload) => {
   switch (payload.type) {
     case SET:
       return { ...state, value: payload.value, ratio: parseFloat(((100 * payload.value) / HUMAN_LIFE_EXPECTANCY).toFixed(2)) }
