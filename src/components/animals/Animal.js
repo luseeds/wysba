@@ -3,17 +3,19 @@ import PropTypes from 'prop-types'
 
 class Animal extends React.Component {
   render() {
-    const { animal } = this.props
+    const { animal, ratio } = this.props
+    const color = ratio < animal.ratio ? 'green' : 'red'
 
-    return <div>
+    return <div style={{ color }}>
       Name : {animal.name}
       Natural life span : {animal.lifespan}
       Slaughter age : {animal.slaughter}
+      Ratio : {animal.ratio}
     </div>
   }
 }
 Animal.propTypes = {
-  age: PropTypes.number,
+  ratio: PropTypes.number,
   animal: PropTypes.object,
 }
 

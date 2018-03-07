@@ -4,15 +4,15 @@ import { connect } from 'react-redux'
 
 import Animal from './Animal'
 
-const Animals = ({ age, animals }) => {
+const Animals = ({ ratio, animals }) => {
   return <div>
-    { animals.map((animal) => <Animal key={animal.name} animal={animal} age={age}/>) }
+    { animals.map((animal) => <Animal key={animal.name} animal={animal} ratio={ratio}/>) }
   </div>
 }
 Animals.propTypes = {
-  age: PropTypes.number,
+  ratio: PropTypes.number,
   animals: PropTypes.array,
 }
 
-const select = (state) => ({ animals: state.animals.data })
+const select = (state) => ({ ratio: state.age.ratio, animals: state.animals.data })
 export default connect(select)(Animals)

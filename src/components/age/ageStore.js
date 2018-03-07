@@ -1,3 +1,5 @@
+const HUMAN_LIFE_EXPECTANCY = 79
+
 const SET = 'AGE/SET'
 const CONFIRM = 'AGE/CONFIRM'
 
@@ -7,7 +9,7 @@ const confirmAge = () => ({ type: CONFIRM })
 const reducer = (state = {}, payload) => {
   switch (payload.type) {
     case SET:
-      return { ...state, value: payload.value }
+      return { ...state, value: payload.value, ratio: (100 * payload.value) / HUMAN_LIFE_EXPECTANCY }
     case CONFIRM:
       return { ...state, confirmed: true }
     default:
