@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 import './Animal.css'
-import * as pictures from './pictures'
+import * as images from './images'
 
 class Animal extends React.Component {
   render() {
@@ -10,7 +10,7 @@ class Animal extends React.Component {
     const className = ratio < animal.ratio ? 'alive' : 'dead'
 
     return <div className={`animal ${className}`}>
-      <div className="picture"><img src={pictures[animal.key]} alt="pig"/></div>
+      <div className="picture"><img src={images[animal.key]} alt="pig"/></div>
       <div className="content">
         <div className="name">{animal.name}</div>
         <div className="progress-bar">

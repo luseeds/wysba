@@ -7,5 +7,6 @@ import eggchicken from './eggchicken.png'
 import turkey from './turkey.png'
 import milkcow from './milkcow.png'
 import meatchicken from './meatchicken.png'
+import unknown from './unknown.png'
 
-export { pig, malecalve, cow, malechick, lamb, eggchicken, turkey, milkcow, meatchicken }
+export { pig, malecalve, cow, malechick, lamb, eggchicken, turkey, milkcow, meatchicken, unknown }

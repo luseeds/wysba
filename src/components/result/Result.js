@@ -6,7 +6,7 @@ import Animals from 'components/animals/Animals'
 import Animal from 'components/animals/Animal'
 import './Result.css'
 
-const exampleAnimal = { name: 'animal name', lifespan: 'natural lifespan', slaughter: 'slaugther age', ratio: 4.17, key: 'pig' }
+const exampleAnimal = { name: 'animal name', lifespan: 'natural lifespan', slaughter: 'slaugther age', ratio: 4.17, key: 'unknown' }
 
 const Result = ({ ratio, children }) => (
   <div>
