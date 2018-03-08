@@ -13,4 +13,4 @@ const reducer = (state = { ratio: 0 }, payload) => {
   }
 }
 
-export { setAge, reducer }
+export { setAge, reducer, HUMAN_LIFE_EXPECTANCY }
