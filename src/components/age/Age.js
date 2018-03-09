@@ -8,7 +8,7 @@ import AgeInput from './AgeInput'
 import './Age.css'
 
 const Age = ({ age }) => (
-  <section className="age">
+  <section className="age handwritten">
     <AgeForm>
       <div className="age-question">I am <AgeInput/> {age > 1 ? 'years' : 'year'} old</div>
     </AgeForm>

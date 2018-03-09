@@ -3,31 +3,6 @@
   margin: 0 auto;
 }
 
-h3 {
-  position: relative;
-  font-size: 35px;
-}
-
-@media (min-width: 894px) {
-  h3 .line {
-    position: absolute;
-    top: 51%;
-    width: 100%;
-    height: 1px;
-    background-color: white;
-    left: 0;
-  }
-}
-h3 .title {
-  background: #43565f;
-  position: relative;
-  padding: 10px 40px;
-  margin: 20px auto;
-  width: 75vw;
-  min-width: 300px;
-  max-width: 370px;
-}
-
 .result-explanation {
   background-color: #cd5b5c;
   padding: 20px 0;
@@ -52,7 +27,7 @@ h3 .title {
 }
 
 .result-explanation .explanation .animal {
-  margin: 20px auto;
+  margin: 20px auto 35px;
 }
 
 .result-explanation .explanation .animal .progress-bar {
@@ -67,18 +42,4 @@ h3 .title {
 
 .explanation .explanation-bar-list {
   padding-left: 16px;
-}
-
-.label {
-  background: #f1565f;
-  padding: 2px 6px;
-  line-height: 25px;
-}
-
-.label.slaughter {
-  background: #ecd06e;
-}
-
-.label.alive {
-  background: #4dc5b6;
 }
