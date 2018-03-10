@@ -6,13 +6,14 @@ import Animals from 'components/animals/Animals'
 import Animal from 'components/animals/Animal'
 import Label from 'components/ui/label/Label'
 import SectionTitle from 'components/ui/sectionTitle/SectionTitle'
+import Share from 'components/share/Share'
 import { HUMAN_LIFE_EXPECTANCY } from 'components/age/ageStore'
 import './Result.css'
 
 const exampleAnimal = { name: 'animal name', lifespan: 'natural lifespan', slaughter: 'slaughter age', ratio: 4.17, key: 'unknown' }
 
 const Result = ({ age, ratio, children }) => (
-  <section className="result">
+  <div>
     <section className="result-animals">
       <span className={age ? '' : 'hidden'}>So you lived {ratio}% of a 'standard' life. (based on a human lifespan of {HUMAN_LIFE_EXPECTANCY} years)</span>
       <Animals ratio={ratio}/>
@@ -53,7 +54,8 @@ const Result = ({ age, ratio, children }) => (
         </div>
       </div>
     </section>
-  </section>
+    <Share/>
+  </div>
 )
 Result.propTypes = {
   age: PropTypes.number,
