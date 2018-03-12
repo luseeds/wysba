@@ -3,13 +3,13 @@ import PropTypes from 'prop-types'
 
 import './SectionTitle.css'
 
-const SectionTitle = ({ children, reverse }) => (
-  <h3 className={`section-title handwritten ${reverse ? 'reverse' : ''}`}>
+const SectionTitle = ({ children, type = 'primary' }) => (
+  <h3 className={`section-title handwritten ${type}`}>
     <div>{children}</div>
   </h3>
 )
 SectionTitle.propTypes = {
-  reverse: PropTypes.bool,
+  type: PropTypes.oneOf(['primary', 'secondary', 'tertiary']),
   children: PropTypes.node,
 }
 

@@ -1,17 +1,30 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-
-import './Section.css'
-
-const Section = ({ reverse, className, children }) => (
-  <section className={className}>
-    <div>{children}</div>
-  </section>
-)
-Section.propTypes = {
-  reverse: PropTypes.bool,
-  className: PropTypes.string,
-  children: PropTypes.node,
+.section {
+  background-color: #43565f;
+  padding: 20px 0;
 }
 
-export default Section
+.section.secondary {
+  background-color: #cd5b5c;
+}
+
+.section > div {
+  width: 90vw;
+  max-width: 371px;
+  margin: 0 auto;
+}
+
+@media (min-width: 894px) {
+  .section > div {
+    max-width: 774px;
+  }
+}
+
+@media (min-width: 1340px) {
+  .section > div {
+    max-width: 1174px;
+  }
+}
+
+.section.full-width > div {
+  max-width: unset;
+}

@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import Animals from 'components/animals/Animals'
 import Animal from 'components/animals/Animal'
 import Label from 'components/ui/label/Label'
-import SectionTitle from 'components/ui/sectionTitle/SectionTitle'
+import Section from 'components/ui/section/Section'
 import Share from 'components/share/Share'
 import { HUMAN_LIFE_EXPECTANCY } from 'components/age/ageStore'
 import './Result.css'
@@ -14,17 +14,14 @@ const exampleAnimal = { name: 'animal name', lifespan: 'natural lifespan', slaug
 
 const Result = ({ age, ratio, children }) => (
   <div>
-    <section className="result-animals">
+    <Section className="result-animals full-width">
       <span className={age ? '' : 'hidden'}>So you lived {ratio}% of a 'standard' life. (based on a human lifespan of {HUMAN_LIFE_EXPECTANCY} years)</span>
       <Animals ratio={ratio}/>
-    </section>
-    <section className="result-explanation">
-      <div className="explanation">
-        <div className="text-center">
-          <SectionTitle>Explanation</SectionTitle>
-          <div>This is how you can read the data:</div>
-        </div>
-        <Animal ratio={ratio} animal={exampleAnimal}/>
+    </Section>
+    <Section title="Explanation" type="secondary" className="result-explanation">
+      <div>This is how you can read the data:</div>
+      <Animal ratio={ratio} animal={exampleAnimal}/>
+      <div className="text-justify">
         <div>
           <p>The <Label type="slaughter">yellow</Label> part represents the animal lifespan when exploited by the meat / dairy / egg industry.</p>
           <p>
@@ -53,7 +50,7 @@ const Result = ({ age, ratio, children }) => (
           </div>
         </div>
       </div>
-    </section>
+    </Section>
     <Share/>
   </div>
 )

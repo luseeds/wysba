@@ -19,3 +19,10 @@ html, body {
 .hidden {
   visibility: hidden;
 }
+
+.text-center {
+  text-align: center;
+}
+.text-justify {
+  text-align: justify;
+}

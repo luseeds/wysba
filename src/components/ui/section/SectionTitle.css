@@ -16,7 +16,7 @@
   }
 }
 .section-title > div {
-  background: #43565f;
+  background: #cd5b5c;
   position: relative;
   padding: 10px 40px;
   margin: 20px auto;
@@ -25,6 +25,6 @@
   max-width: 370px;
 }
 
-.section-title.reverse > div {
-  background: #cd5b5c;
+.section-title.secondary > div {
+  background: #43565f;
 }
