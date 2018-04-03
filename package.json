@@ -1,8 +1,8 @@
 {
-  "name": "wisba",
+  "name": "wysba",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://luseed.github.io/wisba",
+  "homepage": "http://luseed.github.io/wysba",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "react": "^16.2.0",
