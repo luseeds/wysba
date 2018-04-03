@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import Animals from 'components/animals/Animals'
 import Section from 'components/ui/section/Section'
 import Share from 'components/share/Share'
-import Explanation from './Explanation'
+import Explanation from 'components/explanation/Explanation'
 import { HUMAN_LIFE_EXPECTANCY } from 'components/age/ageStore'
 
 const Result = ({ age, ratio }) => (

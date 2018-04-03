@@ -15,8 +15,10 @@ const Explanation = ({ ratio }) => (
     <Animal ratio={ratio} animal={exampleAnimal}/>
     <div className="text-justify">
       <div>
-        <div>If it's green: <Label type="alive">you would still be alive</Label></div>
-        <div>If it's red: <Label type="dead">you would be dead</Label></div>
+        <div className="text-center">
+          <div>If it's green: <Label type="alive">you would still be alive</Label></div>
+          <div>If it's red: <Label type="dead">you would be dead</Label></div>
+        </div>
         <p>The <Label type="slaughter">yellow</Label> part represents the animal lifespan when exploited by the meat / dairy / egg industry.</p>
         <p>
           The end of the yellow part refers to his slaughter age. This is how old he is when killed.
