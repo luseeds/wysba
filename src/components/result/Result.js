@@ -15,7 +15,7 @@ const Result = ({ age, ratio }) => (
       <span className={age ? '' : 'hidden'}>So you lived {ratio}% of a 'standard' life. (based on a human lifespan of {HUMAN_LIFE_EXPECTANCY} years)</span>
       <Animals ratio={ratio}/>
     </Section>
-    <Explanation/>
+    <Explanation ratio={ratio}/>
     <Share/>
   </div>
 )
