@@ -7,7 +7,6 @@ import Section from 'components/ui/section/Section'
 import Share from 'components/share/Share'
 import Explanation from './Explanation'
 import { HUMAN_LIFE_EXPECTANCY } from 'components/age/ageStore'
-import './Result.css'
 
 const Result = ({ age, ratio }) => (
   <div>

@@ -5,16 +5,18 @@ import Animal from 'components/animals/Animal'
 import Label from 'components/ui/label/Label'
 import Section from 'components/ui/section/Section'
 import { HUMAN_LIFE_EXPECTANCY } from 'components/age/ageStore'
-import './Result.css'
+import './Explanation.css'
 
 const exampleAnimal = { name: 'animal name', lifespan: 'natural lifespan', slaughter: 'slaughter age', ratio: 4.17, key: 'unknown' }
 
-const Result = ({ ratio }) => (
+const Explanation = ({ ratio }) => (
   <Section title="Explanation" type="secondary" className="result-explanation">
-    <div>This is how you can read the data:</div>
+    <p>This is how you can read the data:</p>
     <Animal ratio={ratio} animal={exampleAnimal}/>
     <div className="text-justify">
       <div>
+        <div>If it's green: <Label type="alive">you would still be alive</Label></div>
+        <div>If it's red: <Label type="dead">you would be dead</Label></div>
         <p>The <Label type="slaughter">yellow</Label> part represents the animal lifespan when exploited by the meat / dairy / egg industry.</p>
         <p>
           The end of the yellow part refers to his slaughter age. This is how old he is when killed.
@@ -44,8 +46,8 @@ const Result = ({ ratio }) => (
     </div>
   </Section>
 )
-Result.propTypes = {
+Explanation.propTypes = {
   ratio: PropTypes.number,
 }
 
-export default Result
+export default Explanation
