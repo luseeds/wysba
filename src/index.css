@@ -12,6 +12,10 @@ html, body {
   box-sizing: border-box;
 }
 
+::selection {
+  background: #ecd06e;
+}
+
 .handwritten {
   font-family: 'Patrick Hand SC', sans-serif;
 }
