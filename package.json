@@ -2,7 +2,7 @@
   "name": "wysba",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://luseeds.github.io",
+  "homepage": "https://wysba.luseeds.com",
   "dependencies": {
     "gh-pages": "^2.0.0",
     "react": "^16.8.6",
