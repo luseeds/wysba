@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://wysba.luseeds.com",
   "dependencies": {
-    "gh-pages": "^2.0.0",
+    "gh-pages": "^5.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.1.0",
