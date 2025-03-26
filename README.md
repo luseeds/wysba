@@ -73,3 +73,7 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+---
+
+Pig image from [Dan Renco on Unsplash](https://unsplash.com/photos/white-pig-on-brown-soil-Y06imaOLycY)
