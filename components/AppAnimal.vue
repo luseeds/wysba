@@ -15,7 +15,7 @@ const props = defineProps<Props>();
 const isAlive = computed(() => props.ratio < props.animal.ratio);
 
 const glob: Record<string, { default: string }> = import.meta.glob(
-  "@/assets/img/animals/*.png",
+  "@/assets/img/animals/*.svg",
   { eager: true }
 );
 const images = Object.fromEntries(
@@ -30,7 +30,7 @@ const images = Object.fromEntries(
       <img
         :src="images[animal.key]"
         :alt="`Image of ${animal.name}`"
-        class="mx-auto max-w-24"
+        class="mx-auto w-16 max-h-14 my-auto"
       />
       <div
         v-if="!isAlive"
