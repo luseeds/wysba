@@ -1,4 +1,4 @@
-export const HUMAN_LIFE_EXPECTANCY = 79;
+export const HUMAN_LIFE_EXPECTANCY = 80;
 
 export const useUserStore = defineStore("user", () => {
   const age = ref<number | null>(null);

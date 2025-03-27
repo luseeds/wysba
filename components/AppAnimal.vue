@@ -1,8 +1,10 @@
 <script setup lang="ts">
 import { filename } from "pathe/utils";
+import { HUMAN_LIFE_EXPECTANCY } from "~/stores/user";
 
 type Props = {
   ratio: number;
+  detailed?: boolean;
   animal: {
     name: string;
     lifespan: string;
@@ -12,7 +14,7 @@ type Props = {
   };
 };
 const props = defineProps<Props>();
-const isAlive = computed(() => props.ratio < props.animal.ratio);
+const isAlive = computed(() => props.ratio <= props.animal.ratio);
 
 const glob: Record<string, { default: string }> = import.meta.glob(
   "@/assets/img/animals/*.svg",
@@ -24,9 +26,9 @@ const images = Object.fromEntries(
 </script>
 <template>
   <div
-    class="font-handwritten bg-stone-100 text-stone-950 group flex w-80 max-w-full rounded-sm"
+    class="font-handwritten bg-stone-100 text-stone-950 group flex w-80 max-w-full rounded-sm p-2"
   >
-    <div class="flex p-2 relative">
+    <div class="flex px-2 relative">
       <img
         :src="images[animal.key]"
         :alt="`Image of ${animal.name}`"
@@ -54,9 +56,17 @@ const images = Object.fromEntries(
         <div class="ml-2">{{ animal.slaughter }}</div>
         <div class="ml-auto mr-2">{{ animal.lifespan }}</div>
       </div>
-      <span class="group-hover:opacity-100 opacity-0">
-        {{ animal.ratio.toFixed(2) }}% of their normal lifespan</span
-      >
+      <div v-if="detailed">
+        <div>
+          {{
+            ((animal.ratio * HUMAN_LIFE_EXPECTANCY) / 100)
+              .toFixed(1)
+              .replace(/\.0$/, "")
+          }}
+          human years
+        </div>
+        <div>{{ animal.ratio.toFixed(2) }}% of their normal lifespan</div>
+      </div>
     </div>
   </div>
 </template>

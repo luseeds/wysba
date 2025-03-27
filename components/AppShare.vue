@@ -15,6 +15,11 @@
           external
           class="underline hover:text-orange-800"
           >JSON file is available</NuxtLink
+        >. For more information you can see
+        <NuxtLink
+          to="https://www.farmtransparency.org/kb/food/abattoirs/age-animals-slaughtered"
+          class="underline hover:text-orange-800"
+          >the source here</NuxtLink
         >.
       </div>
     </div>

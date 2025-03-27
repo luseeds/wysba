@@ -20,7 +20,7 @@ const exampleAnimal = {
         <AppAnimal
           :animal="exampleAnimal"
           :ratio
-          class="my-8 bg-stone-300 w-96"
+          class="my-8 bg-stone-300 w-full !max-w-96"
         />
         <div>
           <div>
