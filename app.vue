@@ -5,37 +5,7 @@
     <AppResults />
     <AppExplanation />
     <AppShare />
-    <footer class="bg-stone-300 text-orange-950 py-8">
-      <div class="container flex items-baseline">
-        <div class="text-4xl font-title">WYSBA?</div>
-        <div class="ml-4 text-xs">
-          Animals illustration by
-          <a
-            href="https://www.freepik.com/free-vector/farm-animals-set_3977258.htm"
-            class="underline"
-            >Freepik</a
-          >
-          and the pig image is from
-          <a
-            href="https://unsplash.com/photos/white-pig-on-brown-soil-Y06imaOLycY"
-            class="underline"
-            >Dan Renco on Unsplash</a
-          >.
-        </div>
-        <NuxtLink
-          to="https://luseeds.com"
-          class="flex group items-end ml-auto gap-2"
-        >
-          <span class="text-base font-sans"
-            >A project by
-            <span class="underline group-hover:text-orange-800"
-              >luseeds</span
-            ></span
-          >
-          <img src="/luseeds-logo.png" alt="luseeds logo" class="h-10" />
-        </NuxtLink>
-      </div>
-    </footer>
+    <AppFooter />
   </div>
 </template>
 <style>

@@ -14,14 +14,14 @@ const exampleAnimal = {
 </script>
 <template>
   <UISection title="Explanation" class="bg-stone-50 py-24">
-    <div class="max-w-prose">
-      <p class="mb-4">This is how you can read the data:</p>
-      <AppAnimal
-        :animal="exampleAnimal"
-        :ratio
-        class="my-8 bg-stone-300 w-96"
-      />
-      <div class="text-justify">
+    <div class="text-justify flex flex-wrap gap-8 mt-8">
+      <div class="max-w-prose pr-4">
+        <div class="mb-4 text-3xl font-handwritten">How to read the data?</div>
+        <AppAnimal
+          :animal="exampleAnimal"
+          :ratio
+          class="my-8 bg-stone-300 w-96"
+        />
         <div>
           <div>
             If it's green:
@@ -42,12 +42,17 @@ const exampleAnimal = {
             that they are not profitable anymore or because it's time to kill
             them for their meat.
           </p>
+          <div>
+            The full progressbar represents their natural life time. We can
+            clearly see how short their lives are when exploited.
+          </div>
+          <br /><br />
         </div>
-        <div>
-          The full progressbar represents their natural life time. We can
-          clearly see how short their lives are when exploited.
+      </div>
+      <div class="max-w-prose">
+        <div class="mb-4 text-3xl font-handwritten">
+          How is the ratio working?
         </div>
-        <br /><br />
         <div>
           <div>
             When you type in your age at the top we calculate a

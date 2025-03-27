@@ -7,6 +7,16 @@
         Education is super important nowadays. That's why sharing knowledge is
         key.
       </p>
+
+      <div class="mt-8">
+        If you want to share the data, a
+        <NuxtLink
+          to="/animals.json"
+          external
+          class="underline hover:text-orange-800"
+          >JSON file is available</NuxtLink
+        >.
+      </div>
     </div>
   </UISection>
 </template>

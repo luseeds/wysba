@@ -46,6 +46,12 @@ function onInput(event: Event) {
 <style>
 .input-age {
   appearance: textfield;
-  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.input-age::-webkit-outer-spin-button,
+.input-age::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 </style>
