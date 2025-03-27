@@ -47,7 +47,13 @@ const images = Object.fromEntries(
       </div>
       <div
         class="flex h-8 border-2 flex-wrap border-stone-950 rounded-sm text-stone-50"
-        :class="[isAlive ? 'bg-lime-600' : 'bg-rose-900']"
+        :class="[
+          ratio === 0
+            ? 'bg-stone-600'
+            : isAlive
+            ? 'bg-lime-600'
+            : 'bg-rose-900',
+        ]"
       >
         <div
           class="h-full bg-amber-400"

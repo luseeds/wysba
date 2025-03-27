@@ -21,7 +21,7 @@ function onInput(event: Event) {
           min="0"
           step="0.5"
           autofocus
-          class="input-age font-handwritten text-center border-0 border-b-2 hover:bg-stone-500 focus:bg-stone-500 bg-stone-600 border-orange-50 w-20 md:w-32 text-5xl focus:outline-0 focus:border-b-orange-700"
+          class="input-age font-handwritten text-center border-0 border-b-2 hover:bg-stone-500 focus:bg-stone-500 bg-stone-600 border-orange-50 w-20 md:w-32 text-5xl focus:outline-0"
           placeholder="   ?"
           @input="onInput"
         />
