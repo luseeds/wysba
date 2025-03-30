@@ -6,7 +6,8 @@ const { t: $t } = useI18n({
 <template>
   <footer class="bg-stone-300 text-orange-950 py-8">
     <div class="container">
-      <div class="text-4xl font-title">WYSBA?</div>
+      <img src="/logo.png" class="w-60 mb-4" alt="WYSBA?" />
+      <!-- <div class="text-4xl font-title">WYSBA?</div> -->
       <NuxtLink
         to="https://luseeds.com"
         class="flex group items-end shrink-0 md:ml-auto gap-2"
@@ -53,13 +54,13 @@ const { t: $t } = useI18n({
 <i18n lang="json">
 {
   "en": {
-    "project_by": "Project by",
+    "project_by": "A project by",
     "github": "The source code is available {github}",
     "github_text": "on GitHub",
     "attributions": "Animals illustration by {freepik}, and the pig photo is by {unsplash}"
   },
   "fr": {
-    "project_by": "Projet par",
+    "project_by": "Un projet de",
     "github": "Le code source est disponible {github}",
     "github_text": "sur GitHub",
     "attributions": "Illustration des animaux par {freepik}, et la photo du cochon est de {unsplash}"
