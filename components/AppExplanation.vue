@@ -10,8 +10,8 @@ const ratio = computed(() => store.ratio);
 
 const exampleAnimal = {
   name: $t("animal_example.name"),
-  lifespan: $t("animal_example.lifespan"),
-  slaughter: $t("animal_example.slaughter"),
+  lifespan_value: $t("animal_example.lifespan"),
+  slaughter_value: $t("animal_example.slaughter"),
   ratio: 5.7,
   key: "unknown",
 };

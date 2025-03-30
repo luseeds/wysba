@@ -1,1 +1,27 @@
-{}
+{
+  "animal": {
+    "name": {
+      "unknown": "nom de l'animal",
+      "malechick": "poussins mâles",
+      "meatchicken": "poules (viande)",
+      "eggchicken": "poules (œufs)",
+      "turkey": "dindes",
+      "malecalve": "veaux mâles",
+      "cow": "vaches (viande)",
+      "milkcow": "vaches (lait)",
+      "lamb": "agneaux",
+      "rabbit": "lapins",
+      "pig": "porcs"
+    },
+    "unit": {
+      "day": "jour",
+      "days": "jours",
+      "week": "semaine",
+      "weeks": "semaines",
+      "month": "mois",
+      "months": "mois",
+      "year": "an",
+      "years": "ans"
+    }
+  }
+}

@@ -1,1 +1,27 @@
-{}
+{
+  "animal": {
+    "name": {
+      "unknown": "animal name",
+      "malechick": "male egg chicks",
+      "meatchicken": "chickens used for meat",
+      "eggchicken": "chickens used for eggs",
+      "turkey": "turkeys",
+      "malecalve": "male dairy calves",
+      "cow": "cows used for meat",
+      "milkcow": "cows used for milk",
+      "lamb": "lambs",
+      "rabbit": "rabbits",
+      "pig": "pigs"
+    },
+    "unit": {
+      "day": "day",
+      "days": "days",
+      "week": "week",
+      "weeks": "weeks",
+      "month": "month",
+      "months": "months",
+      "year": "year",
+      "years": "years"
+    }
+  }
+}

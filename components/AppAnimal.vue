@@ -2,13 +2,19 @@
 import { filename } from "pathe/utils";
 import { HUMAN_LIFE_EXPECTANCY } from "~/stores/user";
 
+const { t: $t } = useI18n({
+  useScope: "local",
+});
+
 type Props = {
   ratio: number;
   detailed?: boolean;
   animal: {
     name: string;
-    lifespan: string;
-    slaughter: string;
+    lifespan_value: string;
+    lifespan_unit?: string;
+    slaughter_value: string;
+    slaughter_unit?: string;
     ratio: number;
     key: string;
   };
@@ -26,12 +32,12 @@ const images = Object.fromEntries(
 </script>
 <template>
   <div
-    class="font-handwritten bg-stone-100 text-stone-950 group flex w-80 max-w-full rounded-sm p-2"
+    class="font-handwritten bg-stone-100 text-stone-950 group flex w-82 max-w-full rounded-sm p-2"
   >
     <div class="flex px-2 relative">
       <img
         :src="images[animal.key]"
-        :alt="`Image of ${animal.name}`"
+        :alt="`Image of ${$t(`animal.name.${animal.key}`)}`"
         class="mx-auto w-16 max-h-14 my-auto"
       />
       <div
@@ -43,7 +49,7 @@ const images = Object.fromEntries(
     </div>
     <div class="flex-1 px-2 my-auto">
       <div class="text-2xl">
-        {{ animal.name }}
+        {{ $t(`animal.name.${animal.key}`) }}
       </div>
       <div
         class="flex h-8 border-2 flex-wrap border-stone-950 rounded-sm text-stone-50"
@@ -59,8 +65,18 @@ const images = Object.fromEntries(
           class="h-full bg-amber-400"
           :style="{ width: `${animal.ratio}%` }"
         ></div>
-        <div class="ml-2">{{ animal.slaughter }}</div>
-        <div class="ml-auto mr-2">{{ animal.lifespan }}</div>
+        <div class="ml-2">
+          {{ animal.slaughter_value }}
+          {{
+            animal.slaughter_unit && $t(`animal.unit.${animal.slaughter_unit}`)
+          }}
+        </div>
+        <div class="ml-auto mr-2">
+          {{ animal.lifespan_value }}
+          {{
+            animal.lifespan_unit && $t(`animal.unit.${animal.lifespan_unit}`)
+          }}
+        </div>
       </div>
       <div v-if="detailed">
         <div>
@@ -69,10 +85,22 @@ const images = Object.fromEntries(
               .toFixed(1)
               .replace(/\.0$/, "")
           }}
-          human years
+          {{ $t("human_years") }}
         </div>
-        <div>{{ animal.ratio.toFixed(2) }}% of their normal lifespan</div>
+        <div>{{ animal.ratio.toFixed(2) }}% {{ $t("lifespan") }}</div>
       </div>
     </div>
   </div>
 </template>
+<i18n lang="json">
+{
+  "en": {
+    "human_years": "human years",
+    "lifespan": "of their normal lifespan"
+  },
+  "fr": {
+    "human_years": "années humaines",
+    "lifespan": "de leur durée de vie normale"
+  }
+}
+</i18n>
