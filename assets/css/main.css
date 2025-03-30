@@ -8,4 +8,6 @@
 @theme {
   --font-title: "Knewave", sans-serif;
   --font-handwritten: "Patrick Hand SC", sans-serif;
+
+  --breakpoint-xs: 30rem;
 }

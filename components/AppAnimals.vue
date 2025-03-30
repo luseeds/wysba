@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import animals from "public/animals.json";
 
+const { t: $t } = useI18n({
+  useScope: "local",
+});
+
 type Props = {
   ratio: number;
 };
@@ -15,7 +19,7 @@ const detailed = ref(false);
       class="flex gap-2 p-2 text-sm border w-fit hover:bg-stone-500 transition-colors rounded-sm cursor-pointer bg-stone-600 text-stone-50 mb-8"
     >
       <input v-model="detailed" type="checkbox" class="cursor-pointer" />
-      Show detailed version
+      {{ $t("detailed") }}
     </label>
     <div class="flex flex-wrap gap-8">
       <AppAnimal
@@ -28,3 +32,13 @@ const detailed = ref(false);
     </div>
   </div>
 </template>
+<i18n lang="json">
+{
+  "en": {
+    "detailed": "Show detailed version"
+  },
+  "fr": {
+    "detailed": "Voir la version détaillée"
+  }
+}
+</i18n>

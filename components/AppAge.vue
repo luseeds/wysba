@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { HUMAN_LIFE_EXPECTANCY } from "~/stores/user";
 
+const { t: $t } = useI18n({
+  useScope: "local",
+});
+
 const store = useUserStore();
 const age = computed(() => store.age);
 const ratio = computed(() => store.ratio);
@@ -14,29 +18,33 @@ function onInput(event: Event) {
   <div class="text-orange-50">
     <div class="mb-12">
       <div class="font-handwritten text-3xl md:text-5xl">
-        I am
-        <input
-          :value="age"
-          type="number"
-          min="0"
-          step="0.5"
-          class="input-age font-handwritten text-center border-0 border-b-2 hover:bg-stone-500 focus:bg-stone-500 bg-stone-600 border-orange-50 w-20 md:w-32 text-5xl focus:outline-0"
-          placeholder="   ?"
-          @input="onInput"
-        />
-        {{ age ?? 0 > 1 ? "years" : "year" }} old.
+        <i18n-t keypath="age_sentence">
+          <template #age_input>
+            <input
+              :value="age"
+              type="number"
+              min="0"
+              step="0.5"
+              class="input-age font-handwritten text-center border-0 border-b-2 hover:bg-stone-500 focus:bg-stone-500 bg-stone-600 border-orange-50 w-20 md:w-32 text-5xl focus:outline-0"
+              placeholder="   ?"
+              @input="onInput"
+            />
+          </template>
+          <template #year> {{ $t("year", age || 0) }} </template>
+        </i18n-t>
       </div>
       <div class="pt-6 font-sans">
         <div v-if="!ratio">
-          Enter your age above so that we can personalize your results.
-          <small class="text-xs italic"
-            >(we don't save or share any data)</small
-          >
+          {{ $t("subtitle") }}
+          <small class="text-xs italic">{{ $t("subtitle.private") }}</small>
         </div>
         <div v-else-if="ratio">
-          Ok, so based on an average human lifespan of
-          {{ HUMAN_LIFE_EXPECTANCY }} years, you lived
-          <strong>{{ ratio }}%</strong> of a "standard" life.
+          <i18n-t keypath="answer_ratio">
+            <template #human_year>{{ HUMAN_LIFE_EXPECTANCY }}</template>
+            <template #ratio>
+              <strong>{{ ratio }}%</strong>
+            </template>
+          </i18n-t>
         </div>
       </div>
     </div>
@@ -54,3 +62,21 @@ function onInput(event: Event) {
   margin: 0;
 }
 </style>
+<i18n lang="json">
+{
+  "en": {
+    "subtitle": "Enter your age above so that we can personalize your results. {private}",
+    "subtitle.private": "(we don't save or share any data)",
+    "answer_ratio": "Ok, so based on an average human lifespan of {human_year} years, you lived {ratio} of a \"standard\" life.",
+    "age_sentence": "I am {age_input} {year} old.",
+    "year": "year | years"
+  },
+  "fr": {
+    "subtitle": "Entre ton âge ci-dessus pour qu'on puisse personnaliser tes résultats. {private}",
+    "subtitle.private": "(on ne sauvegarde ni ne partage aucune donnée)",
+    "answer_ratio": "D'accord, donc en se basant sur une durée de vie humaine moyenne de {human_year} ans, tu as vécu {ratio} d'une vie \"standard\".",
+    "age_sentence": "J'ai {age_input} {year}.",
+    "year": "an | ans"
+  }
+}
+</i18n>
