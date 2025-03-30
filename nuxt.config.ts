@@ -33,4 +33,7 @@ export default defineNuxtConfig({
       optimizeTranslationDirective: false,
     },
   },
+  telemetry: {
+    enabled: false,
+  },
 });
