@@ -15,7 +15,7 @@ useSeoMeta({
 });
 </script>
 <template>
-  <div class="bg-stone-50 max-w-600 mx-auto">
+  <div class="mx-auto max-w-600 bg-stone-50">
     <AppHeader />
     <AppHero />
     <AppResults />

@@ -20,5 +20,5 @@ const labelClass = computed(() => {
 </script>
 
 <template>
-  <span :class="`${labelClass} p-0.5  px-1 rounded-sm`"><slot /></span>
+  <span :class="`${labelClass} rounded-sm p-0.5 px-1`"><slot /></span>
 </template>

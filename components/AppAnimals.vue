@@ -16,19 +16,13 @@ const detailed = ref(false);
 <template>
   <div>
     <label
-      class="flex gap-2 p-2 text-sm border w-fit hover:bg-stone-500 transition-colors rounded-sm cursor-pointer bg-stone-600 text-stone-50 mb-8"
+      class="mb-8 flex w-fit cursor-pointer gap-2 rounded-sm border bg-stone-600 p-2 text-sm text-stone-50 transition-colors hover:bg-stone-500"
     >
       <input v-model="detailed" type="checkbox" class="cursor-pointer" />
       {{ $t("detailed") }}
     </label>
     <div class="flex flex-wrap gap-8">
-      <AppAnimal
-        v-for="animal in animals.data"
-        :key="animal.key"
-        :animal
-        :ratio
-        :detailed
-      />
+      <AppAnimal v-for="animal in animals.data" :key="animal.key" :animal :ratio :detailed />
     </div>
   </div>
 </template>

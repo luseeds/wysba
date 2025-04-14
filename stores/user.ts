@@ -6,9 +6,7 @@ export const useUserStore = defineStore("user", () => {
 
   function setAge(newAge: number) {
     age.value = newAge;
-    ratio.value = newAge
-      ? parseFloat(((100 * newAge) / HUMAN_LIFE_EXPECTANCY).toFixed(2))
-      : 0;
+    ratio.value = newAge ? parseFloat(((100 * newAge) / HUMAN_LIFE_EXPECTANCY).toFixed(2)) : 0;
   }
 
   return { age, setAge, ratio };

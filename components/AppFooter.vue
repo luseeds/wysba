@@ -4,32 +4,25 @@ const { t: $t } = useI18n({
 });
 </script>
 <template>
-  <footer class="bg-stone-300 text-orange-950 py-8">
+  <footer class="bg-stone-300 py-8 text-orange-950">
     <div class="container">
-      <img src="/logo.png" class="w-60 mb-4" alt="WYSBA?" />
+      <img src="/logo.png" class="mb-4 w-60" alt="WYSBA?" />
       <!-- <div class="text-4xl font-title">WYSBA?</div> -->
-      <NuxtLink
-        to="https://luseeds.com"
-        class="flex group items-end shrink-0 md:ml-auto gap-2"
-      >
-        <span class="text-base font-sans">
+      <NuxtLink to="https://luseeds.com" class="group flex shrink-0 items-end gap-2 md:ml-auto">
+        <span class="font-sans text-base">
           {{ $t("project_by") }}
-          <span class="underline group-hover:text-orange-800"
-            >luseeds</span
-          ></span
+          <span class="underline group-hover:text-orange-800">luseeds</span></span
         >
         <img src="/luseeds-logo.png" alt="luseeds logo" class="h-8" />
       </NuxtLink>
       <i18n-t keypath="github">
         <template #github>
-          <NuxtLink
-            to="https://github.com/luseeds/wysba"
-            class="underline hover:text-orange-800"
-            >{{ $t("github_text") }}</NuxtLink
-          >
+          <NuxtLink to="https://github.com/luseeds/wysba" class="underline hover:text-orange-800">{{
+            $t("github_text")
+          }}</NuxtLink>
         </template>
       </i18n-t>
-      <div class="text-xs mt-8">
+      <div class="mt-8 text-xs">
         <i18n-t keypath="attributions">
           <template #freepik>
             <a

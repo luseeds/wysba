@@ -18,14 +18,10 @@ const exampleAnimal = {
 </script>
 <template>
   <UISection :title="$t('title')" class="bg-stone-50 py-24">
-    <div class="text-justify flex flex-wrap gap-8 mt-8">
+    <div class="mt-8 flex flex-wrap gap-8 text-justify">
       <div class="max-w-prose pr-4">
-        <div class="mb-4 text-3xl font-handwritten">{{ $t("how_to") }}</div>
-        <AppAnimal
-          :animal="exampleAnimal"
-          :ratio
-          class="my-8 bg-stone-300 w-full !max-w-96"
-        />
+        <div class="font-handwritten mb-4 text-3xl">{{ $t("how_to") }}</div>
+        <AppAnimal :animal="exampleAnimal" :ratio class="my-8 w-full !max-w-96 bg-stone-300" />
         <div>
           <div>
             {{ $t("alive") }}
@@ -61,7 +57,7 @@ const exampleAnimal = {
         </div>
       </div>
       <div class="max-w-prose">
-        <div class="mb-4 text-3xl font-handwritten">
+        <div class="font-handwritten mb-4 text-3xl">
           {{ $t("how_ratio") }}
         </div>
         <div>
@@ -79,28 +75,20 @@ const exampleAnimal = {
               <li>
                 <i18n-t keypath="how_ratio_dead">
                   <template #color>
-                    <UILabel type="dead">{{
-                      $t("how_ratio_dead_color")
-                    }}</UILabel>
+                    <UILabel type="dead">{{ $t("how_ratio_dead_color") }}</UILabel>
                   </template>
                   <template #dead>
-                    <UILabel type="dead">{{
-                      $t("how_ratio_dead_text")
-                    }}</UILabel>
+                    <UILabel type="dead">{{ $t("how_ratio_dead_text") }}</UILabel>
                   </template>
                 </i18n-t>
               </li>
               <li>
                 <i18n-t keypath="how_ratio_alive">
                   <template #color>
-                    <UILabel type="alive">{{
-                      $t("how_ratio_alive_color")
-                    }}</UILabel>
+                    <UILabel type="alive">{{ $t("how_ratio_alive_color") }}</UILabel>
                   </template>
                   <template #alive>
-                    <UILabel type="alive">{{
-                      $t("how_ratio_alive_text")
-                    }}</UILabel>
+                    <UILabel type="alive">{{ $t("how_ratio_alive_text") }}</UILabel>
                   </template>
                 </i18n-t>
               </li>

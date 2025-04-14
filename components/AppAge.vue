@@ -25,7 +25,7 @@ function onInput(event: Event) {
               type="number"
               min="0"
               step="0.5"
-              class="input-age font-handwritten text-center border-0 border-b-2 hover:bg-stone-500 focus:bg-stone-500 bg-stone-600 border-orange-50 w-20 md:w-32 text-5xl focus:outline-0"
+              class="input-age font-handwritten w-20 border-0 border-b-2 border-orange-50 bg-stone-600 text-center text-5xl hover:bg-stone-500 focus:bg-stone-500 focus:outline-0 md:w-32"
               placeholder="   ?"
               @input="onInput"
             />

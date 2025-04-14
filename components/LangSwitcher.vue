@@ -12,11 +12,11 @@ const { locale, locales, setLocale } = useI18n();
       v-for="l in locales"
       :key="l.code"
       href="#"
-      class="px-3 py-1 rounded-sm"
+      class="rounded-sm px-3 py-1"
       :class="[
         l.code === locale
           ? 'bg-orange-900 text-orange-50 hover:cursor-default'
-          : 'text-orange-950 hover:text-orange-700 bg-stone-50',
+          : 'bg-stone-50 text-orange-950 hover:text-orange-700',
       ]"
       @click.prevent.stop="setLocale(l.code)"
     >

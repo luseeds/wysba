@@ -14,12 +14,9 @@ const { t: $t } = useI18n({
       <div class="mt-8">
         <i18n-t keypath="data">
           <template #file>
-            <NuxtLink
-              to="/animals.json"
-              external
-              class="underline hover:text-orange-800"
-              >{{ $t("data_file") }}</NuxtLink
-            >
+            <NuxtLink to="/animals.json" external class="underline hover:text-orange-800">{{
+              $t("data_file")
+            }}</NuxtLink>
           </template> </i18n-t
         >{{ " " }}
         <i18n-t keypath="source">

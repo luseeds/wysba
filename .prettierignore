@@ -1,0 +1,14 @@
+node_modules
+
+# Prettier lacks syntax support for Markdown components (MDC)
+# https://github.com/prettier/prettier/issues/13512
+*.md
+
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+dist
+*.local
