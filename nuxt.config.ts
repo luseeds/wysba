@@ -9,20 +9,18 @@ export default defineNuxtConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  app: {
-    head: {
-      titleTemplate: "Would you still be alive?",
-    },
-  },
   i18n: {
+    baseUrl: "https://wysba.luseeds.com",
     locales: [
       {
         code: "en",
+        language: "en",
         file: "en-US.json",
         name: "English",
       },
       {
         code: "fr",
+        language: "fr-FR",
         file: "fr-FR.json",
         name: "Français",
       },

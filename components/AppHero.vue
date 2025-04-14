@@ -131,7 +131,7 @@ const { t: $t } = useI18n({
   "fr": {
     "intro": "Les animaux d'élevage sont tués à un très jeune âge..",
     "question_start": "Si tu étais un animal d'élevage,",
-    "title": "Serais-tu encore {alive}?",
+    "title": "Serais-tu encore {alive} ?",
     "title.alive": "vivant",
     "outro": "Trouvons la réponse.",
     "main_img_alt": "cochon regardant la caméra"
