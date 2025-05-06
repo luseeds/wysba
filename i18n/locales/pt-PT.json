@@ -1,0 +1,27 @@
+{
+    "animal": {
+      "name": {
+        "unknown": "nome do animal",
+        "malechick": "pintos de ovos machos",
+        "meatchicken": "galinhas usadas para carne",
+        "eggchicken": "galinhas para pôr ovos",
+        "turkey": "perus",
+        "malecalve": "bezerros machos de leite",
+        "cow": "vacas usadas para carne",
+        "milkcow": "vacas usadas para leite",
+        "lamb": "cordeiros",
+        "rabbit": "coelhos",
+        "pig": "porcos"
+      },
+      "unit": {
+        "day": "dia",
+        "days": "dias",
+        "week": "semana",
+        "weeks": "semanas",
+        "month": "mês",
+        "months": "meses",
+        "year": "ano",
+        "years": "anos"
+      }
+    }
+  }
